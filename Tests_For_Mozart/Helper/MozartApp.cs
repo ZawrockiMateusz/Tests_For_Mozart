@@ -35,9 +35,14 @@ namespace Tests_For_Mozart.Helper
             formularzLogowania.FindElementByName("Nazwa filter row").SendKeys(login);
             formularzLogowania.FindElementByName("Nazwa filter row").SendKeys(Keys.ArrowDown);
             formularzLogowania.FindElementByName("Nazwa row0").SendKeys(Keys.Enter);
-            Thread.Sleep(500);
+            Thread.Sleep(500); 
 
             formularzLogowania.FindElementByAccessibilityId("textEditPassword").SendKeys(password);
+
+            string gridLookUpEditLogin = formularzLogowania.FindElementByAccessibilityId("gridLookUpEditLogin").Text.Trim();
+            string textEditPassword = formularzLogowania.FindElementByAccessibilityId("textEditPassword").Text.Trim();
+            Assert.AreEqual(login, gridLookUpEditLogin);
+            Assert.AreEqual(password, textEditPassword);
 
             formularzLogowania.FindElementByName("Zaloguj").Click();
         }
@@ -62,7 +67,11 @@ namespace Tests_For_Mozart.Helper
         {
             mainForm.FindElementByName(type).Click();
             Thread.Sleep(500);
-            mainForm.FindElementByName("Nie").Click();
+            try
+            {
+                mainForm.FindElementByName("Nie").Click();
+            }
+            catch{}
         }
         public void SetMP(string mp)
         {            

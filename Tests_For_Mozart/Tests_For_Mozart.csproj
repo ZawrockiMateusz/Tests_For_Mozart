@@ -27,12 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Drivers\" />
-    <Folder Include="Support\" />
+    <ProjectReference Include="..\SpecFlow.Actions.WinAppDriver\SpecFlow.Actions.WinAppDriver.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SpecFlow.Actions.WinAppDriver\SpecFlow.Actions.WinAppDriver.csproj" />
+    <None Update="ReportTemplateWithScreenshots.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

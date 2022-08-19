@@ -1,10 +1,7 @@
 ﻿Feature: Skladniki
-![Składniki](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-![](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-		W tym scenariuszu staram się
-		Zmodyfikować wartości pól Typ 
-		Oraz Punkty monitorowania
-		W oknie Składniki
+#![Składniki]()
+#![]()
+	#W tym scenariuszu staram się zmodyfikować wartości pól Typ oraz Punkty monitorowania w oknie Składniki
 
 @ModifySkladniki
 Scenario: Modify Skladniki 

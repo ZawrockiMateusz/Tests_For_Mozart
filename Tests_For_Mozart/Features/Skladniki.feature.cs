@@ -48,12 +48,7 @@ namespace Tests_For_Mozart.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Skladniki", @"![Składniki](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-![](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-		W tym scenariuszu staram się
-		Zmodyfikować wartości pól Typ 
-		Oraz Punkty monitorowania
-		W oknie Składniki", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Skladniki", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -106,7 +101,7 @@ namespace Tests_For_Mozart.Features
                     "ModifySkladniki"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modify Skladniki", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 10
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -126,28 +121,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
+#line 8
  testRunner.Given("choose database \'MozartWinAppDriver\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
+#line 9
  testRunner.And("log in as \'Szef\' with \'\' password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 10
  testRunner.And("accept product licence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 11
  testRunner.And("open \'Składniki\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 12
  testRunner.And("select a product with \'SMARTFON\' code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 13
  testRunner.And("change product type to \'Produkt\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 14
  testRunner.And("set monitoring points to \'Półprodukt\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 15
  testRunner.Then("I should see values \'P\' as Type and \'Półprodukt\' as Monitoring Point", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
